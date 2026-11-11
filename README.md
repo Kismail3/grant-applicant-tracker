@@ -1,32 +1,27 @@
-# Federal Grant Application Tracker — Streamlit Cloud Demo
+# Federal Grant Application Tracker
 
-A public Streamlit dashboard showcasing real HRSA grant reference data alongside **simulated** application and reviewer workflows.
+An interactive federal grant management dashboard built with **Python, Streamlit, SQLite, and FastAPI**. The project demonstrates application workflow tracking, reviewer management, funding analysis, and REST API development.
 
-## Deployment
+### Live Dashboard
 
-1. Create a **new public GitHub repository** and upload the contents of this folder (not the parent folder).
-2. Visit https://share.streamlit.io/ and select **Create app** / **Deploy** from GitHub.
-3. Select your repository, branch `main`, and main file path `dashboard.py`.
-4. Deploy. Streamlit installs dependencies from `requirements.txt`.
+**[View the Live Application](https://grant-applicant-tracker.streamlit.app)**
 
-## Local preview
+### GitHub Repository
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-streamlit run dashboard.py
-```
+[View Source Code](https://github.com/Kismail3/grant-applicant-tracker)
 
-## Architecture and data safety
+### Key Features
 
-- `dashboard.py`: original four-page Streamlit dashboard styling and charts, with a small public-demo notice and local data adapter.
-- `local_api.py`: reads SQLite in **read-only mode**, and keeps status edits and status-history additions in per-browser Streamlit session state. Visitors cannot change the shared dataset. Changes reset when the session ends.
-- `federal_grants.db`: real HRSA grant/award reference data plus **simulated** application, applicant, reviewer and status-history records. Requested funding is not actual awarded funding.
-- `assets/`: Capitol sidebar SVG graphics.
+- **Application Tracking:** View applications, filter records, and explore application details.
+- **Status Management:** Demonstrate application status transitions and review history.
+- **Reviewer Analytics:** Monitor reviewer assignments and pending decisions.
+- **Funding Analysis:** Visualize requested funding by grant program.
+- **Interactive Dashboard:** Explore application statistics through charts and summary cards.
 
-This cloud demo does **not** start FastAPI. The separate original local project remains unchanged and uses `main.py` for its REST API.
+### Technologies Used
 
-## Important
+Python · Streamlit · FastAPI · SQLite · Pandas · Altair
 
-Review the bundled database for any data you do not want to publish and confirm the source dataset redistribution terms before making the repository public. SQLite is committed here for demonstration; do not use this design for private production records.
+### Data Disclaimer
+
+The project uses real HRSA grant reference data alongside simulated application and reviewer workflows. The publicly deployed dashboard uses session-based status changes that do not permanently modify the underlying database.
