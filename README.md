@@ -10,6 +10,15 @@ An interactive federal grant management dashboard built with **Python, Streamlit
 
 [View Source Code](https://github.com/Kismail3/grant-applicant-tracker)
 
+### Dashboard Overview
+
+![Dashboard Overview](Screenshot_1.png)
+![Application Management](Screenshot_2.png)
+![Application Details](Screenshot_3.png)
+![Status Management](Screenshot_4.png)
+![Reviewer Analytics](Screenshot_5.png)
+![Funding Analysis](Screenshot_6.png)
+
 ### Key Features
 
 - **Application Tracking:** View applications, filter records, and explore application details.
